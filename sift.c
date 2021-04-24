@@ -47,8 +47,7 @@
 #include "./sift.h"
 
 int loop = 1;
-int
-main(int argc, char **argv)
+int main(int argc, char **argv)
 	{
 		int c;
 		u_char to, cnt, flags;
@@ -435,9 +434,7 @@ main(int argc, char **argv)
                         }
                         return (c);
                     }
-int
-receive_packet(struct sift_pack * sp)
-	{
+int receive_packet(struct sift_pack * sp){
 		u_short ip_hl;
 		u_char *payload;
 		char version[128];
@@ -583,15 +580,11 @@ receive_packet(struct sift_pack * sp)
     sp->stats.timed_out ++;
 	return (TIMEDOUT);
 }
-void
-cleanup(int signo)
-{
+void cleanup(int signo){
 	loop = 0;
 	printf("Interrupt signal caught... /n");
 }
-void
-sift_stats(struct sift_pack *sp)
-{
+void sift_stats(struct sift_pack *sp){
 	printf("Sift statistics: /n"
 		"total queries sent:\t\t%41d\n"
 		"total responses received:\t%41d\n"
@@ -607,9 +600,7 @@ sift_stats(struct sift_pack *sp)
 		sp->stats.format_error
         );
 }
-void
-usage(char *name)
-{
+void usage(char *name){
 	printf("usage %s[options] host_file\n"
 		"-h\t\tthis blurb you see right here\n"
 		"-i device\tspecify a device\n"
