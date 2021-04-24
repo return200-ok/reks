@@ -47,8 +47,7 @@
 #include "./sift.h"
 
 int loop = 1;
-int main(int argc, char **argv)
-	{
+int main(int argc, char **argv){
 		int c;
 		u_char to, cnt, flags;
 		char *device;
@@ -208,7 +207,7 @@ int main(int argc, char **argv)
             /*get the subnet mask of the interface */
             if (pcap_lookupnet(device, &local_net, &netmask, errbuf) == -1)
             {
-                snprintf(errbuf, LIBNET_ERRBUF_SIZE, "pcap_lookupnet()");
+                snprintf(errbuf, LIBNET_ERRBUF_SIZE, "pcap_lookupnet()check");
                 sift_destroy(sp);
                 return (NULL);
             }
@@ -433,7 +432,7 @@ int main(int argc, char **argv)
                                 libnet_geterror(sp->l));
                         }
                         return (c);
-                    }
+}
 int receive_packet(struct sift_pack * sp){
 		u_short ip_hl;
 		u_char *payload;
