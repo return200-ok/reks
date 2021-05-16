@@ -5,3 +5,5 @@ RUN apt update && \
     apt install manpages-dev \
     apt install libpcap-dev \
     apt install libnet-dev 
+#note libnet v1.1.0
+# libpcap v0.7.1
